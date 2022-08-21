@@ -61,8 +61,8 @@ function addManager() {
   
       {
         type: "input",
-        name: "engineerOfficeNumber",
-        message: "What is the engineer's office number?"
+        name: "engineerGithub",
+        message: "What is the engineer's GitHub username?"
       }
   
     ]).then(answers => {
@@ -96,8 +96,8 @@ function addManager() {
   
       {
         type: "input",
-        name: "internOfficeNumber",
-        message: "What is the intern's office number?"
+        name: "internSchool",
+        message: "What schoole is the intern attending?"
       }
   
     ]).then(answers => {
