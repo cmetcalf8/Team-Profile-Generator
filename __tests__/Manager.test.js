@@ -1,7 +1,7 @@
-const { default: test } = require("node:test");
-const { hasUncaughtExceptionCaptureCallback } = require("process");
+// const { default: test } = require("node:test");
+// const { hasUncaughtExceptionCaptureCallback } = require("process");
 
-const Manager = requirie("../lib/Manager");
+const Manager = require("../lib/Manager");
 
 test("Can create an office number.", () => {
     const testOfficeNumber = 1;
