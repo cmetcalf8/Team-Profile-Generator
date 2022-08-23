@@ -17,7 +17,7 @@ In the command line enter "node index.js" and proceed to input your needed info.
 
 ## Usage
 Link to demonstration video: https://drive.google.com/file/d/1EUZUWCY2Id6NzRX0jvKDPEpFh47RRCse/view
-
+![screencapture-file-Users-coco-bootcamp-Challenges-Team-Profile-Generator-dist-index-html-2022-08-22-21_43_59](https://user-images.githubusercontent.com/105259367/186064982-99826d5c-8d56-48eb-b8ed-4de75cc3959f.png)
 
 ## Credits
 
