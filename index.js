@@ -2,8 +2,8 @@ const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 const path = require("path");
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+const OUTPUT_DIR = path.resolve(__dirname, "dist");
+const outputPath = path.join(OUTPUT_DIR, "index.html");
 const generateTeam = require("./src/template.js")
 
 const fs = require('fs');
@@ -131,24 +131,26 @@ function addManager() {
       {
         type: "input",
         name: "internSchool",
-        message: "What schoole is the intern attending?"
+        message: "What school is the intern attending?"
       }
   
     ]).then(answers => {
-      const intern = new intern(answers.internName, answers.internId, answers.internEmail, answers.internOfficeNumber);
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internOfficeNumber);
       teamArray.push(intern);
       createTeam();
     });
-
-    function htmlBuilder () {
-      console.log("Team created!")
-  
-      fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
   
   }
 
-  createTeam();
+  function htmlBuilder () {
+    console.log("Team created!")
+
+    fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
+
 }
+
+createTeam();
+
 }
 
 init();
