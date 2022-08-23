@@ -1,16 +1,14 @@
-const { default: test } = require("node:test");
-const { hasUncaughtExceptionCaptureCallback } = require("process");
 const Employee = require("../lib/Employee");
 
 test("Create a new employee", () => {
     const employeeInstance = new Employee();
-    hasUncaughtExceptionCaptureCallback(typeof(employeeInstance)).toBe("object");
+    expect(typeof(employeeInstance)).toBe("object");
 })
 
 test("Name testing", () => {
     const name = "Cory";
     const employeeInstance = new Employee(name);
-    hasUncaughtExceptionCaptureCallback(employeeInstance.name).toBe(name);
+    expect(employeeInstance.name).toBe(name);
 })
 
 test("Testing ID.", () => {
@@ -21,7 +19,7 @@ test("Testing ID.", () => {
 test("Email testing", () => {
     const email = "cmetcalf8@gmail.com";
     const employeeInstance = new Employee("Cory", 1, email);
-    hasUncaughtExceptionCaptureCallback(employeeInstance.email).toBe(email);
+    expect(employeeInstance.email).toBe(email);
 })
 
 test("Puts name through getName method", () => {
