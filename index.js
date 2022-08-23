@@ -100,7 +100,7 @@ function addManager() {
       }
   
     ]).then(answers => {
-      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerOfficeNumber);
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
       teamArray.push(engineer);
       createTeam();
     });
@@ -135,7 +135,7 @@ function addManager() {
       }
   
     ]).then(answers => {
-      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internOfficeNumber);
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
       teamArray.push(intern);
       createTeam();
     });
